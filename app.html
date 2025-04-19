@@ -15,17 +15,23 @@
             <div class="container">
                 <a href="index.html" class="logo">Analizador de Imágenes</a>
                 <div class="nav-links">
-                    <a href="https://github.com" target="_blank" rel="noreferrer" class="github-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                    <button id="theme-toggle" class="theme-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
-                </div>
+    <button id="settings-button" class="settings-button" title="Configuración">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+    </button>
+    <a href="https://github.com" target="_blank" rel="noreferrer" class="github-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+    </a>
+    <button id="theme-toggle" class="theme-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+</div>
             </div>
         </nav>
 
@@ -133,6 +139,40 @@
         </footer>
     </div>
 
+    <!-- Añadir el modal de configuración al final del body, antes de los scripts -->
+<div id="settings-modal" class="modal hidden">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Configuración</h2>
+            <button id="close-settings" class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="settings-group">
+                <h3>API Key de Groq</h3>
+                <p>Se requiere una API key de Groq para analizar imágenes. <a href="https://console.groq.com/keys" target="_blank">Obtén tu API key aquí</a>.</p>
+                <div class="settings-row">
+                    <input type="password" id="api-key-input" placeholder="Ingresa tu API key de Groq" class="settings-input">
+                    <button id="save-api-key" class="button primary">Guardar</button>
+                    <button id="clear-api-key" class="button secondary">Limpiar</button>
+                </div>
+            </div>
+            <div class="settings-group">
+                <h3>Modelo de IA</h3>
+                <p>Selecciona el modelo de IA que deseas utilizar para el análisis de imágenes.</p>
+                <select id="model-select" class="settings-select">
+                    <option value="llama3-70b-8192">Llama 3 70B (Recomendado para análisis detallado)</option>
+                    <option value="llama3-8b-8192">Llama 3 8B (Más rápido, menos detallado)</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="save-settings" class="button primary">Guardar configuración</button>
+        </div>
+    </div>
+</div>
+
+<!-- Añadir el script de configuración antes del script de la aplicación -->
+<script src="js/config.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/app.js"></script>
 </body>
