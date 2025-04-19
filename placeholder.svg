@@ -1,0 +1,7 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <text x="50%" y="50%" font-family="Arial" font-size="20" text-anchor="middle" fill="#6b7280">
+    Vista previa de imagen
+  </text>
+  <path d="M160,125 L240,125 M200,85 L200,165" stroke="#6b7280" stroke-width="5"/>
+</svg>
